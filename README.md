@@ -8,3 +8,29 @@ AirBnb 타입을 따릅니다.
 
 ### Styling
 tailwind css && tailwind styled component
+
+### 폴더 구조
+```
+Virus-Test-RoundingCat
+├─ .eslintrc.cjs
+├─ .gitignore
+├─ .prettierrc.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public
+├─ src
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ assets
+│  │  └─ result
+│  ├─ components
+│  ├─ data
+│  ├─ index.css
+│  ├─ main.jsx
+│  └─ pages
+├─ tailwind.config.js
+└─ vite.config.js
+
+```
