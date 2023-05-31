@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
-import Modal from './components/result/Modal';
+import Main from './pages/Main';
 
 function App() {
   return (
-    <div className="text-3xl font-bold">
-      <Modal />
-    </div>
+    <Main />
   );
 }
 
