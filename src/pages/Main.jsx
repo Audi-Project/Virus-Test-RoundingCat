@@ -1,5 +1,6 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/button/Button';
 
@@ -13,7 +14,7 @@ export default function Main() {
     <MainSection>
       <img className="w-[220px]" src={title} alt="제목" />
       <img className="w-[300px]" src={logoImg} alt="로고 이미지" />
-      <Button url={buttonText} />
+      <Link to="/question"><Button url={buttonText} /></Link>
       <Copy />
     </MainSection>
   );
