@@ -6,7 +6,7 @@ import urlImg from '../../assets/mainUrlShare.png';
 export default function Copy() {
   const urlCopyHandler = () => {
     const url = window.location.href;
-    window.navigator.clipboard.writeText(url).then(() => alert('복사완료'));
+    window.navigator.clipboard.writeText(url).then(() => alert('링크가 복사되었습니다.'));
   };
 
   return (
