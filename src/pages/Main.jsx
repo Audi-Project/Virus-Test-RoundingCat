@@ -6,7 +6,7 @@ import Button from '../components/button/Button';
 
 import Copy from '../components/copy/copy';
 import title from '../assets/mainTitle.png';
-import logoImg from '../assets/mainVirus.png';
+import logoImg from '../assets/mainVirus.svg';
 import buttonText from '../assets/mainButtonText.png';
 
 export default function Main() {
