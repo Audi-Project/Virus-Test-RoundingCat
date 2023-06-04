@@ -3,9 +3,9 @@ import ImgContainer from './ImgContainer';
 
 import virusData from '../../data/virus-data/data';
 
-export default function Modal() {
+export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
   return (
-    <ModalBackDrop>
+    <ModalBackDrop ref={modalRef} onClick={modalSideClick}>
       <ModalBox>
         <ModalTitle>바이러스 전체유형</ModalTitle>
         <DummyImgContainer>
@@ -21,7 +21,7 @@ export default function Modal() {
               ))
           }
         </DummyImgContainer>
-        <FakeBtn />
+        <FakeBtn onClick={openModalHandler} />
       </ModalBox>
     </ModalBackDrop>
   );

@@ -38,12 +38,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          '**/*.js',
-          '**/*.jsx',
-          '**/*.ts',
-          '**/*.tsx',
-        ],
+        devDependencies: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.json'],
       },
     ],
     'import/extensions': [
