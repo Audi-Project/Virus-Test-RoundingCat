@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "cookie";
+  src: url("./assets/font/CookieRun-Bold.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "cookie";
 }
 
-html, body, #root, .App {
+html, body, #root {
   width: 100%;
   height: 100%;
 }
