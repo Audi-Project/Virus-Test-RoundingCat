@@ -1,7 +1,7 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 
-import urlImg from '../../assets/mainUrlShare.png';
+import urlImg from '../../assets/mainUrlShare.svg';
 
 export default function Share() {
   const urlCopyHandler = () => {
