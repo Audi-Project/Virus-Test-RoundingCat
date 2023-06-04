@@ -19,6 +19,13 @@ html, body, #root {
   height: 100%;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cac3da;
+}
+
 @font-face{
   font-family: "Regular";
   src:url("./font/CookieRun Regular.ttf")
