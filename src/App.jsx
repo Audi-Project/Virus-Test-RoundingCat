@@ -1,9 +1,15 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Result from './pages/Result';
 
 function App() {
   return (
-    <div className="text-3xl font-bold font-bold">안녕하세요</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
