@@ -1,12 +1,12 @@
 import tw from 'tailwind-styled-components';
 
 export default function ImgContainer({
-  imgSize, src, alt, mbtiType
+  src, alt, mbtiType
 }) {
   return (
     <Continer>
-      <img className={imgSize} src={src} alt={alt} />
-      <span className="text-xs mt-1.5">{mbtiType}</span>
+      <img src={src} alt={alt} />
+      <span className="text-xs text-[#8059E6]">{mbtiType}</span>
     </Continer>
   );
 }
