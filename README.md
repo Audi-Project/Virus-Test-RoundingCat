@@ -9,7 +9,7 @@ AirBnb 타입을 따릅니다.
 ### Styling
 tailwind css && tailwind styled component
 
-### 폴더구조
+### 폴더 구조
 ```
 Virus-Test-RoundingCat
 ├─ .eslintrc.cjs
