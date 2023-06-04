@@ -3,13 +3,13 @@ import tw from 'tailwind-styled-components';
 
 export default function Button({ url }) {
   return (
-    <ButtonSection>
+    <StartButton>
       <img src={url} alt="버튼 제목" />
-    </ButtonSection>
+    </StartButton>
   );
 }
 
-const ButtonSection = tw.section`
+const StartButton = tw.button`
   bg-[#8152F1]
   p-[20px]
   text-3xl
