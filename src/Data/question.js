@@ -1,4 +1,4 @@
-module.exports = [
+const data = [
   {
     id: 0,
     option: 'EI',
@@ -180,3 +180,5 @@ module.exports = [
     ]
   },
 ];
+
+export default data;
