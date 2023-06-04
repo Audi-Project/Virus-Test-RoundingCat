@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import tw from 'tailwind-styled-components';
 import QuestionBox from '../components/questionPage/QuestionBox';
 import ApplyBox from '../components/questionPage/ApplyBox';
-import data from '../data/dummyData';
+import data from '../Data/question';
 
 const Container = tw.div`
 flex
