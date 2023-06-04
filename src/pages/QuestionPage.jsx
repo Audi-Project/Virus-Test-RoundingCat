@@ -19,6 +19,7 @@ space-y-[10px]
 `;
 
 export default function QuestionPage() {
+  // eslint-disable-next-line no-unused-vars
   const [result, setResult] = useState([]);
   const [idx, setIdx] = useState(0);
 
@@ -37,7 +38,8 @@ export default function QuestionPage() {
         <Container>
           <p>
             {idx + 1}
-            /10
+            /
+            {data.length}
           </p>
           <QuestionBox question={currentQuestion} />
           <ApplyContainer>
