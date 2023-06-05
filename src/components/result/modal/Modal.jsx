@@ -1,27 +1,31 @@
 import tw from 'tailwind-styled-components';
 import ImgContainer from './ImgContainer';
 
-import virusData from '../../data/virus-data/data';
+import data from '../../../data/virus';
+import closeBtn from '../../../assets/result/modal/closeBtnText.png';
 
-export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
+export default function Modal() {
   return (
-    <ModalBackDrop ref={modalRef} onClick={modalSideClick}>
+    <ModalBackDrop>
       <ModalBox>
         <ModalTitle>바이러스 전체유형</ModalTitle>
         <DummyImgContainer>
           {
-            virusData
-              .map((data) => (
+            data
+              .map((d) => (
                 <ImgContainer
-                  imgSize={data.imageSize}
-                  src={data.url}
-                  alt={data.mbtiType}
-                  mbtiType={data.mbtiType}
+                  src={d.url}
+                  alt={d.mbtiType}
+                  mbtiType={d.mbtiType}
                 />
               ))
           }
         </DummyImgContainer>
-        <FakeBtn onClick={openModalHandler} />
+        <div>
+          <ButtonSection>
+            <img className="inline absolute bottom-1.5 left-9" src={closeBtn} alt="버튼 제목" />
+          </ButtonSection>
+        </div>
       </ModalBox>
     </ModalBackDrop>
   );
@@ -45,12 +49,12 @@ const ModalBox = tw.div`
   border-[3px]
   flex
   flex-col
-  justify-evenly
   items-center
+  py-[18px]
+  justify-between
 `;
-
 const DummyImgContainer = tw.div`
-  grid grid-rows-4 grid-flow-col gap-2
+grid grid-rows-4 grid-flow-col gap-5
 `;
 
 const ModalTitle = tw.div`
@@ -58,9 +62,12 @@ text-[24px]
 text-[#8059E6]
 `;
 
-const FakeBtn = tw.button`
-bg-[#8059E6]
-w-[122px]
-h-[46px]
-rounded-[50px]
+const ButtonSection = tw.button`
+  bg-[#8152F1]
+  p-[20px]
+  rounded-full
+  relative
+  shadow-3xl 
+  w-[122px] 
+  h-[46px]
 `;

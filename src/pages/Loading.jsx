@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import LoadingImg from '../assets/loading/loadingVirus.svg';
+import loadingVirus from '../assets/loading/loadingVirus.svg';
 
 export default function Loading() {
   return (
@@ -7,7 +7,7 @@ export default function Loading() {
       <Contianer>
         <div className="mb-20 text-[24px]">진단서를 작성하고 있습니다</div>
         <div className="animate-bounce">
-          <img src={LoadingImg} alt="loading-virus" />
+          <img src={loadingVirus} alt="loading-virus" />
         </div>
         <div className="text-[26px] flex">
           <span>바이러스 분석 중</span>
