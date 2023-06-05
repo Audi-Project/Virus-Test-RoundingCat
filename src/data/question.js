@@ -47,7 +47,7 @@ const data = [
   {
     id: 3,
     option: 'JP',
-    question: '마트 시식코너에서 시식을 했다. 직원 분이 이번에 나온 상품이 2+1이라고 권유를 하지만 딱히 내 입맛은 아니다.',
+    question: '가려던 맛집이 공지도 없이 휴무다.',
     answer: [
       {
         type: 'J',
