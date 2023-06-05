@@ -1,7 +1,8 @@
 import tw from 'tailwind-styled-components';
 import ImgContainer from './ImgContainer';
 
-import virusData from '../../data/virus-data/data';
+import virusData from '../../../data/virus-data/data';
+import closeBtn from '../../../assets/result/closeBtnText.png';
 
 export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
   return (
@@ -13,7 +14,7 @@ export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
             virusData
               .map((data) => (
                 <ImgContainer
-                  imgSize={data.imageSize}
+                  key={data.id}
                   src={data.url}
                   alt={data.mbtiType}
                   mbtiType={data.mbtiType}
@@ -21,7 +22,11 @@ export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
               ))
           }
         </DummyImgContainer>
-        <FakeBtn onClick={openModalHandler} />
+        <div>
+          <ButtonSection onClick={openModalHandler}>
+            <img className="inline absolute bottom-1.5 left-9" src={closeBtn} alt="버튼 제목" />
+          </ButtonSection>
+        </div>
       </ModalBox>
     </ModalBackDrop>
   );
@@ -58,9 +63,12 @@ text-[24px]
 text-[#8059E6]
 `;
 
-const FakeBtn = tw.button`
-bg-[#8059E6]
-w-[122px]
-h-[46px]
-rounded-[50px]
+const ButtonSection = tw.button`
+  bg-[#8152F1]
+  p-[20px]
+  rounded-full
+  relative
+  shadow-3xl 
+  w-[122px] 
+  h-[46px]
 `;

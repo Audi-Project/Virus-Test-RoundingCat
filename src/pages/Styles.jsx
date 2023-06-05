@@ -77,3 +77,7 @@ export const Kakao = tw.img`
   w-[50px]
   rounded-full
 `;
+
+export const ShareButton = tw.button`
+  m-1
+`;

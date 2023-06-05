@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container, Section, Section2, Box, Box2, ButtonSection, ShareSection, Kakao
+  Container, Section, Section2, Box, Box2, ButtonSection, ShareSection, Kakao, ShareButton,
 } from './Styles';
 import ENTP from '../assets/images/ENTP-겉바속촉.png';
 import reset from '../assets/result/reset.svg';
 import all from '../assets/result/all.svg';
 import share from '../assets/result/share.svg';
 import link from '../assets/result/link.svg';
-import Modal from '../components/result/Modal';
+import Modal from '../components/result/modal/Modal';
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,12 +61,12 @@ function Result() {
             <Box2>
               <img src={share} alt="share" />
               <ShareSection>
-                <button type="button" onClick={urlCopyHandler}>
+                <ShareButton onClick={urlCopyHandler}>
                   <img src={link} alt="link" />
-                </button>
-                <button type="button" onClick={handlePageShare}>
+                </ShareButton>
+                <ShareButton onClick={handlePageShare}>
                   <Kakao className="w-[50px] rounded-full" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="공유하기" />
-                </button>
+                </ShareButton>
               </ShareSection>
             </Box2>
           </Section2>
