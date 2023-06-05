@@ -56,6 +56,7 @@ export const ButtonSection = tw.button`
   rounded-full
   cursor-pointer
   m-3
+  shadow-3xl
 `;
 
 export const ShareSection = tw.section`

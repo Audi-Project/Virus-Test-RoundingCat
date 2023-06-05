@@ -1,8 +1,8 @@
 import tw from 'tailwind-styled-components';
 import ImgContainer from './ImgContainer';
 
-import virusData from '../../../data/virus-data/data';
-import closeBtn from '../../../assets/result/closeBtnText.png';
+import data from '../../../data/virus';
+import closeBtn from '../../../assets/result/modal/closeBtnText.png';
 
 export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
   return (
@@ -11,13 +11,13 @@ export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
         <ModalTitle>바이러스 전체유형</ModalTitle>
         <DummyImgContainer>
           {
-            virusData
-              .map((data) => (
+            data
+              .map((d) => (
                 <ImgContainer
-                  key={data.id}
-                  src={data.url}
-                  alt={data.mbtiType}
-                  mbtiType={data.mbtiType}
+                  src={d.url}
+                  alt={d.mbtiType}
+                  mbtiType={d.mbtiType}
+                  key={d.id}
                 />
               ))
           }
@@ -50,12 +50,12 @@ const ModalBox = tw.div`
   border-[3px]
   flex
   flex-col
-  justify-evenly
   items-center
+  py-[18px]
+  justify-between
 `;
-
 const DummyImgContainer = tw.div`
-  grid grid-rows-4 grid-flow-col gap-2
+grid grid-rows-4 grid-flow-col gap-5
 `;
 
 const ModalTitle = tw.div`

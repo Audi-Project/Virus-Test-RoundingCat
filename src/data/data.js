@@ -18,66 +18,82 @@ import ISTP from '../assets/images/ISTP-논리분석.png';
 const data = [
   {
     id: 0,
+    name: 'ENFJ',
     url: ENFJ
   },
   {
     id: 1,
+    name: 'ENFP',
     url: ENFP
   },
   {
     id: 2,
+    name: 'ENTJ',
     url: ENTJ
   },
   {
     id: 3,
+    name: 'ENTP',
     url: ENTP
   },
   {
     id: 4,
+    name: 'ESFJ',
     url: ESFJ
   },
   {
     id: 5,
+    name: 'ESFP',
     url: ESFP
   },
   {
     id: 6,
+    name: 'ESTJ',
     url: ESTJ
   },
   {
     id: 7,
+    name: 'ESTP',
     url: ESTP
   },
   {
     id: 8,
+    name: 'INFJ',
     url: INFJ
   },
   {
     id: 9,
+    name: 'INFP',
     url: INFP
   },
   {
     id: 10,
+    name: 'INTJ',
     url: INTJ
   },
   {
     id: 11,
+    name: 'INTP',
     url: INTP
   },
   {
     id: 12,
+    name: 'ISFJ',
     url: ISFJ
   },
   {
-    id: 14,
+    id: 13,
+    name: 'ISFP',
     url: ISFP
   },
   {
-    id: 15,
+    id: 14,
+    name: 'ISTJ',
     url: ISTJ
   },
   {
-    id: 16,
+    id: 15,
+    name: 'ISTP',
     url: ISTP
   },
 ];

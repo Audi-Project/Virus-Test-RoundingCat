@@ -9,6 +9,9 @@ import all from '../assets/result/all.svg';
 import share from '../assets/result/share.svg';
 import link from '../assets/result/link.svg';
 import Modal from '../components/result/modal/Modal';
+// import data from '../data/data';
+// const image=data.map((val)=>val.name==="넘겨주는 값")
+// {image?<img src={image.url} alt="MBTI" />:<img src={ENTP} alt="MBTI"/>}
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);

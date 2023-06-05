@@ -26,3 +26,8 @@ html, body, #root {
   align-items: center;
   
 }
+
+@font-face{
+  font-family: "Regular";
+  src:url("./font/CookieRun Regular.ttf")
+}
