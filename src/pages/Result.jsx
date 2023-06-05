@@ -8,7 +8,7 @@ import reset from '../assets/result/reset.svg';
 import all from '../assets/result/all.svg';
 import share from '../assets/result/share.svg';
 import link from '../assets/result/link.svg';
-import Modal from '../components/result/Modal';
+import Modal from '../components/result/modal/Modal';
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);
