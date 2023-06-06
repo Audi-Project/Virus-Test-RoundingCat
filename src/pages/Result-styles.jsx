@@ -6,6 +6,9 @@ export const Container = tw.div`
   justify-center
   items-center
   font-Regular
+  w-[390px]
+  h-[1362px]
+  mt-[34px]
 `;
 
 export const Section = tw.div`
