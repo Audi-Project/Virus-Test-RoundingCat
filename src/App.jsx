@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/question" element={<QuestionPage />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/result/:params" element={<Result />} />
         <Route path="/loading" element={<Loading />} />
       </Routes>
     </BrowserRouter>

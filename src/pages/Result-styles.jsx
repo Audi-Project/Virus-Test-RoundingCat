@@ -6,6 +6,9 @@ export const Container = tw.div`
   justify-center
   items-center
   font-Regular
+  w-[390px]
+  h-[1362px]
+  mt-[34px]
 `;
 
 export const Section = tw.div`
@@ -56,6 +59,7 @@ export const ButtonSection = tw.button`
   rounded-full
   cursor-pointer
   m-3
+  shadow-3xl
 `;
 
 export const ShareSection = tw.section`
@@ -76,4 +80,18 @@ export const ShareSection = tw.section`
 export const Kakao = tw.img`
   w-[50px]
   rounded-full
+`;
+
+export const ShareButton = tw.button`
+  m-1
+`;
+
+export const ModalBackDrop = tw.div`
+  bg-[#21212166]
+  flex
+  items-center
+  justify-center
+  fixed
+  w-screen
+  h-screen
 `;
