@@ -1,22 +1,21 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {
   Container, Section, Section2, Box, Box2, ButtonSection, ShareSection,
   Kakao, ShareButton, ModalBackDrop
-} from './Styles';
-import ENTP from '../assets/images/ENTP-겉바속촉.png';
+} from './Result-styles';
 import reset from '../assets/result/reset.svg';
 import all from '../assets/result/all.svg';
 import share from '../assets/result/share.svg';
 import link from '../assets/result/link.svg';
 import Modal from '../components/result/modal/Modal';
-// import data from '../data/data';
-// const image=data.map((val)=>val.name==="넘겨주는 값")
-// {image?<img src={image.url} alt="MBTI" />:<img src={ENTP} alt="MBTI"/>}
+import data from '../data/data';
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
+  const { params } = useParams();
+  const image = data.findIndex((val) => val.name === params);
 
   const openModalHandler = () => {
     setIsOpen(!isOpen);
@@ -50,7 +49,7 @@ function Result() {
         </ModalBackDrop>
       ) : <div />}
       <Section>
-        <img src={ENTP} alt="ENFP" />
+        {image ? (<img src={data[image].url} alt="MBTI" />) : (<div />)}
       </Section>
       <Section2>
         <Box>
