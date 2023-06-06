@@ -20,4 +20,5 @@ const StartButton = tw.button`
   h-[78px]
   rounded-full
   cursor-pointer
+  shadow-3xl
 `;
