@@ -13,6 +13,8 @@ flex-col
 justify-center
 w-[390px]
 p-[16px]
+h-[844px] 
+bg-[#F0E9FF]
 `;
 
 const ApplyContainer = tw.div`
