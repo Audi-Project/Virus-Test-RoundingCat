@@ -1,7 +1,18 @@
+import { useEffect } from 'react';
 import tw from 'tailwind-styled-components';
+import { useNavigate } from 'react-router-dom';
 import loadingVirus from '../assets/loading/loadingVirus.svg';
 
-export default function Loading() {
+export default function Loading({ getResult }) {
+  const navigation = useNavigate();
+  const result = getResult().join('');
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation(`/result/${result}`);
+    }, 2000);
+  }, []);
+
   return (
     <div className="flex items-center w-[390px] h-[844px] bg-[#D8C5FD]">
       <Contianer>

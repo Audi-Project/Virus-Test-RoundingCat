@@ -3,7 +3,6 @@ import progressVirus from '../../assets/progressBar/progressVirus.svg';
 import pill from '../../assets/progressBar/pill.svg';
 
 export default function ProgressBar({ progress, width }) {
-  console.log(progress);
   return (
     <div>
       <ProgressBarBack>
@@ -37,5 +36,5 @@ const Bar = tw.div`
     bg-[#7000FF]
     border
     border-black
-    duration-800
+    duration-1000
 `;
