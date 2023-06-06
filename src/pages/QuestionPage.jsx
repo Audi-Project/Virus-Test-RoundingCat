@@ -1,9 +1,11 @@
+/* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 import tw from 'tailwind-styled-components';
 import QuestionBox from '../components/questionPage/QuestionBox';
 import ApplyBox from '../components/questionPage/ApplyBox';
 import data from '../data/question';
 import ProgressBar from '../components/questionPage/ProgressBar';
+import Loading from './Loading';
 
 const Container = tw.div`
 flex
@@ -20,7 +22,6 @@ space-y-[10px]
 `;
 
 export default function QuestionPage() {
-  // eslint-disable-next-line no-unused-vars
   const [result, setResult] = useState([]);
   const [idx, setIdx] = useState(0);
   const [progress, setProgress] = useState(-20);
@@ -33,9 +34,36 @@ export default function QuestionPage() {
     setWidth((preWidth) => preWidth + 27);
   };
 
-  const currentQuestion = data[idx].question;
-  const firstAnswer = data[idx].answer[0].content;
-  const secondAnswer = data[idx].answer[1].content;
+  const getResult = () => {
+    const obj = {
+      E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0
+    };
+    const mbti = [];
+    result.forEach((x) => obj[x] + 1);
+    if (obj.E > obj.I) mbti.push('E');
+    else mbti.push('I');
+
+    if (obj.S > obj.N) mbti.push('S');
+    else mbti.push('N');
+
+    if (obj.T > obj.F) mbti.push('T');
+    else mbti.push('F');
+
+    if (obj.J > obj.P) mbti.push('J');
+    else mbti.push('P');
+
+    return mbti;
+  };
+
+  let currentQuestion;
+  let firstAnswer;
+  let secondAnswer;
+
+  if (idx < 12) {
+    currentQuestion = data[idx].question;
+    firstAnswer = data[idx].answer[0].content;
+    secondAnswer = data[idx].answer[1].content;
+  }
 
   return (
     <div>
@@ -54,7 +82,7 @@ export default function QuestionPage() {
           </ApplyContainer>
         </Container>
       ) : (
-        <div>끝!</div>
+        <Loading getResult={getResult} />
       )}
     </div>
   );
