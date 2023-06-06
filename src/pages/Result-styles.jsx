@@ -94,4 +94,5 @@ export const ModalBackDrop = tw.div`
   fixed
   w-screen
   h-screen
+  top-0
 `;
