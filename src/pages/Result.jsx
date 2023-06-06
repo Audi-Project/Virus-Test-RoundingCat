@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container, Section, Section2, Box, Box2, ButtonSection, ShareSection, Kakao, ShareButton,
+  Container, Section, Section2, Box, Box2, ButtonSection, ShareSection,
+  Kakao, ShareButton, ModalBackDrop
 } from './Styles';
 import ENTP from '../assets/images/ENTP-겉바속촉.png';
 import reset from '../assets/result/reset.svg';
@@ -40,41 +41,40 @@ function Result() {
   return (
     <Container>
       {isOpen ? (
-        <Modal
-          modalSideClick={modalSideClick}
-          modalRef={modalRef}
-          openModalHandler={openModalHandler}
-        />
-      ) : (
-        <>
-          <Section>
-            <img src={ENTP} alt="ENFP" />
-          </Section>
-          <Section2>
-            <Box>
-              <ButtonSection>
-                <Link to="/">
-                  <img src={reset} alt="reset" />
-                </Link>
-              </ButtonSection>
-              <ButtonSection onClick={openModalHandler}>
-                <img src={all} alt="all" />
-              </ButtonSection>
-            </Box>
-            <Box2>
-              <img src={share} alt="share" />
-              <ShareSection>
-                <ShareButton onClick={urlCopyHandler}>
-                  <img src={link} alt="link" />
-                </ShareButton>
-                <ShareButton onClick={handlePageShare}>
-                  <Kakao className="w-[50px] rounded-full" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="공유하기" />
-                </ShareButton>
-              </ShareSection>
-            </Box2>
-          </Section2>
-        </>
-      )}
+        <ModalBackDrop ref={modalRef} onClick={modalSideClick}>
+          <Modal
+            modalSideClick={modalSideClick}
+            modalRef={modalRef}
+            openModalHandler={openModalHandler}
+          />
+        </ModalBackDrop>
+      ) : <div />}
+      <Section>
+        <img src={ENTP} alt="ENFP" />
+      </Section>
+      <Section2>
+        <Box>
+          <ButtonSection>
+            <Link to="/">
+              <img src={reset} alt="reset" />
+            </Link>
+          </ButtonSection>
+          <ButtonSection onClick={openModalHandler}>
+            <img src={all} alt="all" />
+          </ButtonSection>
+        </Box>
+        <Box2>
+          <img src={share} alt="share" />
+          <ShareSection>
+            <ShareButton onClick={urlCopyHandler}>
+              <img src={link} alt="link" />
+            </ShareButton>
+            <ShareButton onClick={handlePageShare}>
+              <Kakao className="w-[50px] rounded-full" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="공유하기" />
+            </ShareButton>
+          </ShareSection>
+        </Box2>
+      </Section2>
     </Container>
   );
 }

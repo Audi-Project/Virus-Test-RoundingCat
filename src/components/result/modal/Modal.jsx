@@ -4,42 +4,31 @@ import ImgContainer from './ImgContainer';
 import data from '../../../data/virus';
 import closeBtn from '../../../assets/result/modal/closeBtnText.png';
 
-export default function Modal({ modalSideClick, modalRef, openModalHandler }) {
+export default function Modal({ openModalHandler }) {
   return (
-    <ModalBackDrop ref={modalRef} onClick={modalSideClick}>
-      <ModalBox>
-        <ModalTitle>바이러스 전체유형</ModalTitle>
-        <DummyImgContainer>
-          {
-            data
-              .map((d) => (
-                <ImgContainer
-                  src={d.url}
-                  alt={d.mbtiType}
-                  mbtiType={d.mbtiType}
-                  key={d.id}
-                />
-              ))
-          }
-        </DummyImgContainer>
-        <div>
-          <ButtonSection onClick={openModalHandler}>
-            <img className="inline absolute bottom-1.5 left-9" src={closeBtn} alt="버튼 제목" />
-          </ButtonSection>
-        </div>
-      </ModalBox>
-    </ModalBackDrop>
+    <ModalBox>
+      <ModalTitle>바이러스 전체유형</ModalTitle>
+      <DummyImgContainer>
+        {
+          data
+            .map((d) => (
+              <ImgContainer
+                src={d.url}
+                alt={d.mbtiType}
+                mbtiType={d.mbtiType}
+                key={d.id}
+              />
+            ))
+        }
+      </DummyImgContainer>
+      <div>
+        <ButtonSection onClick={openModalHandler}>
+          <img className="inline absolute bottom-1.5 left-9" src={closeBtn} alt="버튼 제목" />
+        </ButtonSection>
+      </div>
+    </ModalBox>
   );
 }
-const ModalBackDrop = tw.div`
-  bg-[#2121214f]
-  relative
-  w-screen
-  h-screen
-  flex
-  items-center
-  justify-center
-`;
 
 const ModalBox = tw.div`
   bg-[#FFFFFF]
@@ -53,6 +42,8 @@ const ModalBox = tw.div`
   items-center
   py-[18px]
   justify-between
+  absolute
+  t-1
 `;
 const DummyImgContainer = tw.div`
 grid grid-rows-4 grid-flow-col gap-5

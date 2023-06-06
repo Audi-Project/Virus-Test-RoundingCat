@@ -82,3 +82,13 @@ export const Kakao = tw.img`
 export const ShareButton = tw.button`
   m-1
 `;
+
+export const ModalBackDrop = tw.div`
+  bg-[#21212166]
+  flex
+  items-center
+  justify-center
+  fixed
+  w-screen
+  h-screen
+`;
