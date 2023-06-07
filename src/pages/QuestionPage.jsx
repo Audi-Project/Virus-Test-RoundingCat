@@ -41,7 +41,7 @@ export default function QuestionPage() {
       E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0
     };
     const mbti = [];
-    result.forEach((x) => obj[x] + 1);
+    result.forEach((x) => { obj[x] += 1; });
     if (obj.E > obj.I) mbti.push('E');
     else mbti.push('I');
 
@@ -60,11 +60,15 @@ export default function QuestionPage() {
   let currentQuestion;
   let firstAnswer;
   let secondAnswer;
+  let firstType;
+  let secondType;
 
   if (idx < 12) {
     currentQuestion = data[idx].question;
     firstAnswer = data[idx].answer[0].content;
     secondAnswer = data[idx].answer[1].content;
+    firstType = data[idx].answer[0].type;
+    secondType = data[idx].answer[1].type;
   }
 
   return (
@@ -79,8 +83,8 @@ export default function QuestionPage() {
           <ProgressBar progress={progress} width={width} />
           <QuestionBox question={currentQuestion} />
           <ApplyContainer>
-            <ApplyBox answer={firstAnswer} onNextQuestion={handleNextQuestion} />
-            <ApplyBox answer={secondAnswer} onNextQuestion={handleNextQuestion} />
+            <ApplyBox answer={firstAnswer} onNextQuestion={() => handleNextQuestion(firstType)} />
+            <ApplyBox answer={secondAnswer} onNextQuestion={() => handleNextQuestion(secondType)} />
           </ApplyContainer>
         </Container>
       ) : (
