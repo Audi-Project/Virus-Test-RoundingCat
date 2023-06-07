@@ -1,5 +1,9 @@
 import tw from 'tailwind-styled-components';
 
+export const Div = tw.div`
+  h-screen
+`;
+
 export const Container = tw.div`
   flex
   flex-col
@@ -94,4 +98,5 @@ export const ModalBackDrop = tw.div`
   fixed
   w-screen
   h-screen
+  top-0
 `;
