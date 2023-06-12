@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 import ImgContainer from './ImgContainer';
 
-import data from '../../../data/virus';
+import virusData from '../../../data/virus';
 import closeBtn from '../../../assets/result/modal/closeBtnText.png';
 
 export default function Modal({ openModalHandler }) {
@@ -10,13 +10,13 @@ export default function Modal({ openModalHandler }) {
       <ModalTitle>바이러스 전체유형</ModalTitle>
       <DummyImgContainer>
         {
-          data
-            .map((d) => (
+          virusData
+            .map((virus) => (
               <ImgContainer
-                src={d.url}
-                alt={d.mbtiType}
-                mbtiType={d.mbtiType}
-                key={d.id}
+                src={virus.url}
+                alt={virus.mbtiType}
+                mbtiType={virus.mbtiType}
+                key={virus.id}
               />
             ))
         }
