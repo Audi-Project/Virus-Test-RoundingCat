@@ -71,7 +71,7 @@ export const ShareSection = tw.section`
   items-center
   justify-center
   p-1
-  w-[120px]
+  w-[160px]
   h-[65px]
   bg-[#FEFDFF]
   mt-2
@@ -79,11 +79,6 @@ export const ShareSection = tw.section`
   border-2
   border-[#6938EA]
   rounded-[50px]
-`;
-
-export const Kakao = tw.img`
-  w-[50px]
-  rounded-full
 `;
 
 export const ShareButton = tw.button`
