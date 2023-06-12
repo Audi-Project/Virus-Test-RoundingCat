@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
-
+import data from '../../data/data';
 import urlImg from '../../assets/mainUrlShare.svg';
 
 export default function Share() {
@@ -27,6 +27,24 @@ export default function Share() {
         </button>
       </div>
     </ShareSection>
+  );
+}
+
+export function ResultShare({ name }) {
+  const templeate = data.filter((x) => x.name === name)[0].tempId;
+  const handlePageShare = () => {
+    window.Kakao.Link.sendCustom({
+      templateId: templeate,
+    });
+  };
+  return (
+    <button type="button" onClick={handlePageShare}>
+      <img
+        src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+        alt="카카오링크 보내기 버튼"
+        className="w-[50px] rounded-full"
+      />
+    </button>
   );
 }
 
