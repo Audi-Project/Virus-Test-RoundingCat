@@ -32,9 +32,10 @@ const ProgressBarBack = tw.div`
 `;
 
 const Bar = tw.div`
-    h-[16px]
+    h-[15px]
     bg-[#7000FF]
     border
     border-black
     duration-1000
-`;
+    rounded-sm
+    `;
