@@ -12,15 +12,21 @@ flex
 flex-col
 justify-center
 w-[390px]
+h-[844px]
 p-[16px]
-h-[844px] 
 bg-[#F0E9FF]
+
+landscape:w-[600px]
 `;
 
 const ApplyContainer = tw.div`
 flex
 flex-col
 space-y-[10px]
+
+landscape:flex-row
+landscape:space-x-[10px]
+landscape:space-y-0
 `;
 
 export default function QuestionPage() {
