@@ -91,7 +91,7 @@ export const ModalBackDrop = tw.div`
   items-center
   justify-center
   fixed
-  w-screen
-  h-screen
+  w-full
+  h-full
   top-0
 `;
