@@ -16,8 +16,6 @@ h-[844px]
 p-[16px]
 bg-[#F0E9FF]
 
-landscape:w-[600px]
-
 max-[360px]:w-[360px] max-[360px]:h-[740px]
 max-[375px]:w-[375px] max-[375px]:h-[667px]
 max-[390px]:w-[390px] max-[390px]:h-[844px]
@@ -29,10 +27,6 @@ const ApplyContainer = tw.div`
 flex
 flex-col
 space-y-[10px]
-
-landscape:flex-row
-landscape:space-x-[10px]
-landscape:space-y-0
 `;
 
 export default function QuestionPage() {

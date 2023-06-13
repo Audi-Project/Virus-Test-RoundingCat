@@ -15,8 +15,6 @@ const Box = tw.div`
   m-[10px]
   mb-[30px]
   shadow-inner
-
-  landscape:p-5
 `;
 
 export default function QuestionBox({ question }) {

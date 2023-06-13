@@ -14,8 +14,6 @@ const Box = tw.button`
   hover:bg-[#bf8ff5]
   transform active: scale-98
   active:drop-shadow-none
-
-  landscape:p-5
 `;
 
 export default function ApplyBox({ onNextQuestion, answer }) {
