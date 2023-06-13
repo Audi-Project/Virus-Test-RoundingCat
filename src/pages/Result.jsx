@@ -4,7 +4,7 @@ import DomToImage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 import {
   Div, Container, Section, Section2, Box, Box2, ButtonSection, ShareSection,
-  ShareButton, ModalBackDrop
+  ShareButton, ModalBackDrop, Comment, Kakao
 } from '../styles/Result-styles';
 import reset from '../assets/result/reset.svg';
 import all from '../assets/result/all.svg';
@@ -13,7 +13,6 @@ import link from '../assets/result/link.svg';
 import download from '../assets/result/download.svg';
 import Modal from '../components/result/modal/Modal';
 import data from '../data/data';
-import { ResultShare } from '../components/share/Share';
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +33,12 @@ function Result() {
   const urlCopyHandler = () => {
     const url = window.location.href;
     window.navigator.clipboard.writeText(url).then(() => alert('링크가 복사되었습니다.'));
+  };
+
+  const handlePageShare = () => {
+    window.Kakao.Link.sendCustom({
+      templateId: 94563,
+    });
   };
 
   const onDownload = () => {
@@ -74,11 +79,17 @@ function Result() {
               <ShareButton onClick={urlCopyHandler}>
                 <img src={link} alt="link" />
               </ShareButton>
-              <ResultShare name={params} />
+              <ShareButton onClick={handlePageShare}>
+                <Kakao src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="공유하기" />
+              </ShareButton>
               <ShareButton onClick={onDownload}>
                 <img src={download} alt="download" />
               </ShareButton>
             </ShareSection>
+            <Comment>
+              <p>아이폰에서 이미지 다운 시,</p>
+              <p>이미지를 꾹 눌러서 저장해주세요.</p>
+            </Comment>
           </Box2>
         </Section2>
       </Container>
