@@ -17,6 +17,12 @@ p-[16px]
 bg-[#F0E9FF]
 
 landscape:w-[600px]
+
+max-[360px]:w-[360px] max-[360px]:h-[740px]
+max-[375px]:w-[375px] max-[375px]:h-[667px]
+max-[390px]:w-[390px] max-[390px]:h-[844px]
+max-[412px]:w-[412px] max-[412px]:h-[915px]
+max-[414px]:w-[414px] max-[414px]:h-[896px]
 `;
 
 const ApplyContainer = tw.div`
