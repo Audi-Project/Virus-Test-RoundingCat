@@ -19,82 +19,98 @@ const data = [
   {
     id: 0,
     name: 'ENFJ',
-    url: ENFJ
+    url: ENFJ,
+    tempId: 94585,
   },
   {
     id: 1,
     name: 'ENFP',
-    url: ENFP
+    url: ENFP,
+    tempId: 94598,
   },
   {
     id: 2,
     name: 'ENTJ',
-    url: ENTJ
+    url: ENTJ,
+    tempId: 94597,
   },
   {
     id: 3,
     name: 'ENTP',
-    url: ENTP
+    url: ENTP,
+    tempId: 94596,
   },
   {
     id: 4,
     name: 'ESFJ',
-    url: ESFJ
+    url: ESFJ,
+    tempId: 94584,
   },
   {
     id: 5,
     name: 'ESFP',
-    url: ESFP
+    url: ESFP,
+    tempId: 94594,
   },
   {
     id: 6,
     name: 'ESTJ',
-    url: ESTJ
+    url: ESTJ,
+    tempId: 94530,
   },
   {
     id: 7,
     name: 'ESTP',
-    url: ESTP
+    url: ESTP,
+    tempId: 94586,
   },
   {
     id: 8,
     name: 'INFJ',
-    url: INFJ
+    url: INFJ,
+    tempId: 94595,
   },
   {
     id: 9,
     name: 'INFP',
-    url: INFP
+    url: INFP,
+    tempId: 94593,
   },
   {
     id: 10,
     name: 'INTJ',
-    url: INTJ
+    url: INTJ,
+    tempId: 94592,
   },
   {
     id: 11,
     name: 'INTP',
-    url: INTP
+    url: INTP,
+    tempId: 94591,
   },
   {
     id: 12,
     name: 'ISFJ',
-    url: ISFJ
+    url: ISFJ,
+    tempId: 94590,
   },
   {
     id: 13,
     name: 'ISFP',
-    url: ISFP
+    url: ISFP,
+    tempId: 94589,
   },
   {
     id: 14,
     name: 'ISTJ',
-    url: ISTJ
+    url: ISTJ,
+    tempId: 94588,
   },
   {
     id: 15,
     name: 'ISTP',
-    url: ISTP
+    url: ISTP,
+    tempId: 94587,
   },
 ];
 

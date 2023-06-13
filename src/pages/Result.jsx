@@ -1,15 +1,19 @@
 import React, { useState, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import DomToImage from 'dom-to-image';
+import { saveAs } from 'file-saver';
 import {
   Div, Container, Section, Section2, Box, Box2, ButtonSection, ShareSection,
-  Kakao, ShareButton, ModalBackDrop
-} from './Result-styles';
+  ShareButton, ModalBackDrop
+} from '../styles/Result-styles';
 import reset from '../assets/result/reset.svg';
 import all from '../assets/result/all.svg';
 import share from '../assets/result/share.svg';
 import link from '../assets/result/link.svg';
+import download from '../assets/result/download.svg';
 import Modal from '../components/result/modal/Modal';
 import data from '../data/data';
+import { ResultShare } from '../components/share/Share';
 
 function Result() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +36,12 @@ function Result() {
     window.navigator.clipboard.writeText(url).then(() => alert('링크가 복사되었습니다.'));
   };
 
-  const handlePageShare = () => {
-    window.Kakao.Link.sendCustom({
-      templateId: 94563,
+  const onDownload = () => {
+    DomToImage.toBlob(document.querySelector('.card')).then((blob) => {
+      saveAs(blob, 'result.png');
     });
   };
+
   return (
     <Div>
       <Container>
@@ -50,7 +55,7 @@ function Result() {
           </ModalBackDrop>
         ) : null }
         <Section>
-          <img src={data[image].url} alt="MBTI" />
+          <img className="card" src={data[image].url} alt="MBTI" />
         </Section>
         <Section2>
           <Box>
@@ -69,8 +74,9 @@ function Result() {
               <ShareButton onClick={urlCopyHandler}>
                 <img src={link} alt="link" />
               </ShareButton>
-              <ShareButton onClick={handlePageShare}>
-                <Kakao className="w-[50px] rounded-full" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="공유하기" />
+              <ResultShare name={params} />
+              <ShareButton onClick={onDownload}>
+                <img src={download} alt="download" />
               </ShareButton>
             </ShareSection>
           </Box2>
