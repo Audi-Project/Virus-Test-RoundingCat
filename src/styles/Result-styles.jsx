@@ -12,7 +12,6 @@ export const Container = tw.div`
   font-Regular
   w-[390px]
   h-[1362px]
-  mt-[34px]
 `;
 
 export const Section = tw.div`
@@ -91,7 +90,20 @@ export const ModalBackDrop = tw.div`
   items-center
   justify-center
   fixed
-  w-screen
-  h-screen
+  w-full
+  h-full
   top-0
+`;
+
+export const Comment = tw.div`
+  flex
+  flex-col
+  items-center
+  justify-center
+  text-base
+`;
+
+export const Kakao = tw.img`
+w-[45px] 
+rounded-full
 `;
